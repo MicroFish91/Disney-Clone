@@ -36,10 +36,11 @@ export const NavMenu = styled.div`
 `;
 
 export const Profile = styled.img`
-  width: 5em;
+  width: 3.7em;
   border-radius: 50%;
   cursor: pointer;
   margin: 0.5em;
+  margin-right: 3em;
 `;
 
 // ---- NavItem.tsx ----
@@ -59,5 +60,32 @@ export const NavItemContainer = styled.a`
 
   span {
     margin-left: 0.2em;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+
+      height: 2px;
+      opacity: 0;
+      transform: scaleX(0);
+      transform-origin: left center;
+
+      transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+
+      background-color: white;
+    }
+  }
+
+  &:hover {
+    span:after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
   }
 `;
