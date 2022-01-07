@@ -6,10 +6,11 @@ export const Nav = styled.div`
   justify-content: space-around;
   align-items: center;
 
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+
+  height: 9vh;
 
   background-color: black;
 `;
