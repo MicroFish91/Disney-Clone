@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import ImageSlider from "../../components/ImageSlider";
 
 interface HomePageProps {}
 
 const HomePage: React.FC<HomePageProps> = () => {
-  return <Container>Home</Container>;
+  return (
+    <Container>
+      <ImageSlider />
+    </Container>
+  );
 };
 
 export default HomePage;
