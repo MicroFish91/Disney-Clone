@@ -10,7 +10,7 @@ export const Nav = styled.div`
   left: 0;
   right: 0;
 
-  height: 9vh;
+  height: 12vh;
 
   background-color: black;
 `;

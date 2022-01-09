@@ -5,7 +5,7 @@ export const Container = styled.div`
   position: relative;
 
   width: 100vw;
-  height: calc(100vh - 9vh);
+  height: calc(100vh - 12vh);
 
   &:before {
     position: absolute;

@@ -2,11 +2,17 @@ import Slider from "react-slick";
 import styled from "styled-components";
 
 export const Carousel = styled(Slider)`
+  margin-top: 1em;
+
   padding: 0 3em;
 
   .slick-dots li button:before {
     font-size: 0.5rem;
     color: white;
+  }
+
+  .slick-dots {
+    left: 0;
   }
 
   .slick-list {
@@ -17,6 +23,7 @@ export const Carousel = styled(Slider)`
     left: 3% !important;
     z-index: 1;
   }
+
   .slick-next {
     right: 3% !important;
     z-index: 1;
