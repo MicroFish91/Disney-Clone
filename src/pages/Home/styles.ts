@@ -24,3 +24,7 @@ export const Container = styled.div`
     background-size: cover;
   }
 `;
+
+export const Body = styled.div`
+  padding: 0 3em;
+`;
