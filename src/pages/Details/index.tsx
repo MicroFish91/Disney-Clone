@@ -1,5 +1,16 @@
 import React from "react";
-import styled from "styled-components";
+import {
+  AddButton,
+  Background,
+  Container,
+  Controls,
+  Description,
+  GroupWatchButton,
+  ImageTitle,
+  PlayButton,
+  Subtitle,
+  TrailerButton,
+} from "./styles";
 
 interface DetailsPageProps {}
 
@@ -21,120 +32,19 @@ const DetailsPage: React.FC<DetailsPageProps> = () => {
           <img src="/images/play-icon-white.png" />
           <span>Trailer</span>
         </TrailerButton>
-        <AddButton>
-          <span>+</span>
-        </AddButton>
-        <GroupWatchButton>g</GroupWatchButton>
+        <AddButton>+</AddButton>
+        <GroupWatchButton>
+          <img src="/images/group-icon.png" />
+        </GroupWatchButton>
       </Controls>
+      <Subtitle>2018 • 7m • Family, Fantasy, Kids, Animation</Subtitle>
+      <Description>
+        A Chinese mom who's sad when her grown son leaves home gets another
+        chance at motherhood when one of her dumplings springs to life. But she
+        finds that nothing stays cute and small forever.
+      </Description>
     </Container>
   );
 };
 
 export default DetailsPage;
-
-const Container = styled.div`
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-  height: auto;
-
-  padding: 5em 4em;
-`;
-
-const Background = styled.div`
-  position: fixed;
-
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  z-index: -1;
-
-  opacity: 0.8;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-`;
-
-const ImageTitle = styled.div`
-  min-width: 225px;
-  max-width: 27vw;
-  margin-bottom: 3vh;
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-`;
-
-const Controls = styled.div`
-  display: flex;
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-  }
-`;
-
-const PlayButton = styled.button`
-  display: flex;
-  align-items: center;
-
-  background-color: white;
-
-  border: none;
-  border-radius: 3px;
-
-  width: auto;
-  max-width: 50vw;
-
-  padding: 0.3em 0.8em;
-  margin: 0.5em;
-
-  // May want to omit since different text spans
-  img {
-    max-width: 60%;
-    height: auto;
-  }
-
-  span {
-    color: black;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  &:hover {
-    background: rgb(198, 198, 198);
-  }
-
-  @media (max-width: 1024px) {
-    font-size: 0.7rem;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 0.5rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1rem;
-  }
-`;
-
-const TrailerButton = styled(PlayButton)`
-  border: 1px solid rgb(249, 249, 249);
-  background: rgba(0, 0, 0, 0.3);
-
-  span {
-    color: rgb(249, 249, 249);
-  }
-`;
-
-const AddButton = styled.button``;
-
-const GroupWatchButton = styled.button``;
