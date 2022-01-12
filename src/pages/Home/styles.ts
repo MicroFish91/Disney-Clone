@@ -10,7 +10,7 @@ export const Container = styled.div`
   padding-bottom: 2em;
 
   &:before {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
