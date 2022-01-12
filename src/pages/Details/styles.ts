@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
 
   width: 100%;
-  height: auto;
+  min-height: inherit;
 
   padding: 5em 4em;
 `;

@@ -3,6 +3,7 @@ import ContentWrapper from "./hoc/ContentWrapper";
 import MainLayout from "./layouts/Main";
 import Details from "./pages/Details";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
         <Route
           path="/details"
           element={<ContentWrapper Wrapper={MainLayout} Content={Details} />}
+        />
+        <Route
+          path="/login"
+          element={<ContentWrapper Wrapper={MainLayout} Content={Login} />}
         />
       </Routes>
     </>
