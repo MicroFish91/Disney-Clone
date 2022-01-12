@@ -4,8 +4,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   position: relative;
 
-  width: 100vw;
-  height: calc(100vh - 12vh);
+  width: 100%;
+  height: auto;
+
+  padding-bottom: 2em;
 
   &:before {
     position: absolute;
