@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
 // ---- index.tsx ----
-export const Nav = styled.div`
+export const Nav = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
 
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
+
+  z-index: 100;
 
   height: 12vh;
 
