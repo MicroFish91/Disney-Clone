@@ -14,6 +14,7 @@ export const Nav = styled.nav`
   z-index: 100;
 
   height: 12vh;
+  min-height: 100px;
 
   background-color: black;
 `;
@@ -34,7 +35,7 @@ export const NavMenu = styled.div`
 
   width: 60%;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1280px) {
     display: none;
   }
 `;
