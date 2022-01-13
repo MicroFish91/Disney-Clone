@@ -1,4 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
+// import { collection, getDocs } from "firebase/firestore";
 import { MOVIES_SNAPSHOT } from "../../data/movies";
 
 export const getMovies = createAsyncThunk(
