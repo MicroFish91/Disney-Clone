@@ -1,4 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router";
+import { selectMovie } from "../../redux/Movies/moviesSelectors";
 import {
   AddButton,
   Background,
@@ -15,13 +18,16 @@ import {
 interface DetailsPageProps {}
 
 const DetailsPage: React.FC<DetailsPageProps> = () => {
+  const { id } = useParams();
+  const movie = useSelector(selectMovie(id));
+
   return (
     <Container>
       <Background>
-        <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4F39B7E16726ECF419DD7C49E011DD95099AA20A962B0B10AA1881A70661CE45/scale?width=1440&aspectRatio=1.78&format=jpeg" />
+        <img src={movie?.backgroundImg} />
       </Background>
       <ImageTitle>
-        <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D7AEE1F05D10FC37C873176AAA26F777FC1B71E7A6563F36C6B1B497CAB1CEC2/scale?width=1440&aspectRatio=1.78" />
+        <img src={movie?.titleImg} />
       </ImageTitle>
       <Controls>
         <PlayButton>
@@ -37,12 +43,8 @@ const DetailsPage: React.FC<DetailsPageProps> = () => {
           <img src="/images/group-icon.png" />
         </GroupWatchButton>
       </Controls>
-      <Subtitle>2018 • 7m • Family, Fantasy, Kids, Animation</Subtitle>
-      <Description>
-        A Chinese mom who's sad when her grown son leaves home gets another
-        chance at motherhood when one of her dumplings springs to life. But she
-        finds that nothing stays cute and small forever.
-      </Description>
+      <Subtitle>{movie?.subtitle}</Subtitle>
+      <Description>{movie?.description}</Description>
     </Container>
   );
 };

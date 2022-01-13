@@ -14,7 +14,7 @@ function App() {
           element={<ContentWrapper Wrapper={MainLayout} Content={Home} />}
         />
         <Route
-          path="/details"
+          path="/details/:id"
           element={<ContentWrapper Wrapper={MainLayout} Content={Details} />}
         />
         <Route

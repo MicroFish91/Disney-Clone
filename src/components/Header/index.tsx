@@ -9,7 +9,7 @@ const Header: React.FC<HeaderProps> = () => {
     <Nav>
       <Logo src="/images/logo.svg" />
       <NavMenu>
-        <NavItem src="/images/home-icon.svg" title="Home" />
+        <NavItem src="/images/home-icon.svg" title="Home" link="/" />
         <NavItem src="/images/search-icon.svg" title="Search" />
         <NavItem src="/images/watchlist-icon.svg" title="Watchlist" />
         <NavItem src="/images/original-icon.svg" title="Originals" />
