@@ -1,8 +1,8 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { AsyncThunk, createAsyncThunk } from "@reduxjs/toolkit";
 // import { collection, getDocs } from "firebase/firestore";
 import MOVIES_SNAPSHOT from "../../data/movies.json";
 
-export const getMovies = createAsyncThunk(
+export const getMovies: AsyncThunk<any, void, {}> = createAsyncThunk(
   "movies/getMovies",
   async (_: void, thunkAPI) => {
     try {

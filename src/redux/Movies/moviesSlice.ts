@@ -1,8 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { getMovies } from "./moviesThunks";
 import { Movie, MoviesReducerState } from "./types";
-// import { collection, getDocs } from "firebase/firestore";
-// import db from "../../config/firebase";
 
 const INITIAL_STATE: MoviesReducerState = {
   movies: [],
@@ -10,7 +8,7 @@ const INITIAL_STATE: MoviesReducerState = {
 };
 
 const moviesSlice = createSlice({
-  name: "snapshots",
+  name: "movies",
   initialState: INITIAL_STATE,
   reducers: {},
   extraReducers: (builder) => {
