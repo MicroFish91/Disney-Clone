@@ -1,6 +1,6 @@
 # Disney Clone
 
-Put together a disney clone using TypeScript, React, React-Router, Styled-Components, and Redux Toolkit.
+Put together a Disney clone using TypeScript, React, React-Router, Styled-Components, and Redux Toolkit.
 
 ## Website Screenshots
 
